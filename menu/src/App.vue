@@ -133,7 +133,7 @@ const handleInc = (subitem: MenuListItem) => {
 <template>
   <van-notice-bar
     left-icon="volume-o"
-    text="欢迎光临本餐厅，菜单仅供挑选食材，选择口味及计算金额，无法下单支付，请将提交后的订单明细页面发到老板即可。"
+    text="欢迎光临本餐厅，菜单仅供挑选食材，选择口味及计算金额，无法下单支付，请将提交后的订单明细页面发给商家即可。时价菜品请单独咨询商家。"
   />
   <Menu
     v-if="step === 0"

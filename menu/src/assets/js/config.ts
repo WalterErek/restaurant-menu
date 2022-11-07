@@ -1,6 +1,11 @@
 export const menuConfig = [{
   name: '招牌',
   list: [{
+    name: '肚包鸡',
+    price: 0,
+    count: 0,
+    badge: '时价',
+  },{
     name: '土烧鱼头',
     price: 88,
     count: 0,
@@ -174,6 +179,11 @@ export const menuConfig = [{
     name: '蒜蓉虾',
     price: 38,
     count: 0,
+  },{
+    name: '油爆小河虾',
+    price: 0,
+    count: 0,
+    badge: '时价',
   }]
 },{
   name: '干锅类',

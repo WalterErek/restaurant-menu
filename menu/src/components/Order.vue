@@ -49,6 +49,18 @@ const onScreenshot = () => {
 
       <!-- 订单汇总 -->
       <OrderInfo />
+
+      <van-divider :style="{ borderColor: '#ccc' }" />
+
+      <div>
+        就餐人数：<input type="tel" placeholder="就餐人数" style="width: 22%" />
+      </div>
+
+      <van-divider :style="{ borderColor: '#ccc' }" />
+
+      <div>
+        备注信息：<input type="text" placeholder="想和老板说什么都可以写在这里" style="width: 70%" />
+      </div>
     </section>
 
     <section class="order-detail card-wrap">
@@ -60,15 +72,15 @@ const onScreenshot = () => {
       </div>
   
       <ul v-for="(item, index) in customerMenu" :key="index">
-        <li class="order-item">
+        <li class="order-item" :class="{'order-sp': item.badge}">
           <div>{{ item.name }}</div>
           <div>
             数量：<span style="font-weight: bold; color: #e93030">{{
               item.count
             }}</span>
           </div>
-          <div>单价:{{ item.price }}</div>
-          <div>总价:{{ item.price * item.count }}</div>
+          <div class="price">单价:<span>{{ item.badge ? '时价' : item.price }}</span></div>
+          <div class="price">总价:<span>{{ item.badge ? '时价' : item.price * item.count }}</span></div>
         </li>
       </ul>
     </section>
@@ -138,5 +150,8 @@ const onScreenshot = () => {
 }
 .order-item > div:nth-of-type(1) {
   width: 40%;
+}
+.order-sp .price span {
+  color: #1113df;
 }
 </style>
