@@ -33,7 +33,7 @@ const switchTab = (index: number) => {
             </template>
           </van-badge>
           
-          <div>单价:￥{{ subitem.price }}</div>
+          <div>单价:￥{{ subitem.badge ? '时价' : subitem.price }}</div>
           <van-stepper v-model="subitem.count" theme="round" min="0" integer />
         </li>
       </ul>
